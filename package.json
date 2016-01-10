@@ -1,0 +1,15 @@
+{
+    "name": "chadWanderscheid.cWd_nightClub",
+    "title": "Night Club",
+    "description": "Have an Epic Night with the nightClub theme.",
+    "homepage": "https://github.com/chadw75/nightClub-Theme.git",
+    "version": "1.0.0",
+    "author": "Chad Wanderscheid <chadwdesign@gmail.com> (https://github.com/chadw75/Brackets-nightClub-Theme.git)",
+    "license": "MIT",
+    "theme": {
+        "file": "theme.css",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["dark", "cWd", "night", "cool", "neon", "bitchen"]
+}

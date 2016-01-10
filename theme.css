@@ -1,0 +1,151 @@
+/* Define some variables used in multiple places */
+@background: #070707;
+@foreground: #dbdbdb;
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: linear-gradient(180deg, rgba(127, 127, 247, 0.47) 0%, rgba(255, 255, 255, 0.07) 20.33%, rgba(255, 255, 255, 0.17) 34.48%, rgba(173, 255, 247, 0.03) 50%, rgba(255, 255, 255, 0) 51.1%, rgba(225, 225, 225, 0) 52.47%, rgba(184, 184, 184, 0.01) 54.64%, rgba(152, 110, 229, 0.38) 95%, rgba(59, 59, 59, 0.27) 60%, rgba(86, 86, 86, 0.04) 62.67%, rgba(64, 64, 64, 0.05) 65.99%, rgba(48, 48, 48, 0.06) 69.86%, rgba(36, 36, 36, 0.08) 74.65%, rgb(29, 29, 29) 81.36%, rgba(173, 55, 247, 0.42) 100%);
+  border-style : Solid;
+  border-color : rgba(245, 3, 3, 0.38);
+  border-color : rgba(15, 15, 15, 0.49);
+  border-width : 0px;
+  opacity : 0.33;
+  filter: alpha(opacity=33);
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #FFF;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, 0.2);
+        color: #ff0000;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #696969;    
+    }
+}
+
+.cm-string, .cm-string-2, .cm-hr {color: deeppink;}
+.cm-atom {color: darkorchid;}
+.cm-number, .cm-attribute, .cm-plus {color: #14ff00;}
+.cm-def, .cm-property {color: yellow;}
+.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
+.cm-comment {color: rgb(85, 85, 85);}
+.cm-error, .cm-minus {color: crimson;}
+.cm-header {color: #d85896;}
+.cm-link {color: #14ff00; text-decoration: underline;}
+.cm-rangeinfo {color: #6c71c4;}
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: #27b4ff;}
+
+/* Extra CSS */
+
+.CodeMirror-searching {
+    background-color: #d3cd69;
+    &.searching-current-match {
+        background-color: #f6a644;
+    }
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid #d2ffe1 !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: 3px solid rgb(01,01,01,.9);
+   
+}
+
+.CodeMirror-linenumber {
+    color: #a3a3a3;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: #333333
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background: linear-gradient(180deg, rgba(147, 115, 255, 0.56) 0%, rgba(255, 255, 255, 0.26) 15%, rgba(255, 255, 255, 0.65) 45%, rgba(173, 255, 47, 0.33) 65%, rgba(255, 255, 255, 0) 85%, rgba(225, 225, 225, 0) 90%, rgba(227,227,227,.33) 100%;
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    /* Ensure visibility against gray inline editor background */
+    background-color: deepskyblue;
+    color: @foreground !important;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid black;
+}
+
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: transparent;
+        color: #b9b9b9;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: #afafaf;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff
+        }
+    }
+}
+
+.CodeMirror-foldgutter-open:after {
+    color: limegreen;
+}
+
+.CodeMirror-foldgutter-folded:after {
+    color: lime;
+}
+
+.CodeMirror.over-gutter, .CodeMirror-activeline {
+    .CodeMirror-foldgutter-open:after {
+        color: lawngreen;
+    }
+}
+
+.CodeMirror-foldmarker {
+    border-color: slategray;
+    color: black;
+    background-color: dimgray;
+}
+
+/* Non-editor styling */
+
+.image-view,
+
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: white;
+}
